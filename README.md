@@ -24,7 +24,7 @@ Simply clone or fork the git repository and run it locally. Make sure to install
 
 ## Usage
 
-Follow the steps in the following video to set up your database, seed it, and get it running. To watch the video, [click here]().
+Follow the steps in the following video to set up your database, seed it, and get it running. To watch the video, [click here](https://drive.google.com/file/d/1FHgrEC2IK2dZptv045x8P4gigP3-v0Ug/view).
 
 ## License
 
