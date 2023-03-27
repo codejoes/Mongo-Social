@@ -1,15 +1,30 @@
 const router = require('express').Router();
 
-//GET POSTS
+const {
+    getAllPosts,
+    getOnePost,
+    createPost,
+    updatePost,
+    deletePost,
+    createComment,
+    deleteComment
+} = require('../../controllers/postController');
 
-//GET SINGLE POST
+//GET ALL POSTS AND CREATE POST
+router.route('/').get(getAllPosts).post(createPost);
 
-//CREATE POST
-
-//UPDATE POST
-
-//DELETE POST
+//GET, UPDATE, DELETE A POST
+router.route('/:postId')
+.get(getOnePost)
+.put(updatePost)
+.delete(deletePost);
 
 //CREATE COMMENT
+router.route('/:postId/comments')
+.post(createComment);
 
 //DELETE COMMENT
+router.route('/:postId/comments/:commentId')
+.delete(deleteComment);
+
+module.exports = router;
