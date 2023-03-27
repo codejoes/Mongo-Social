@@ -42,10 +42,10 @@ module.exports = {
       { $set: req.body },
       { runValidators: true, New: true }
     )
-      .then((user) =>
-        !user
-          ? res.status(404).json({ message: "No comment found with that ID!" })
-          : res.json(user)
+      .then((post) =>
+        !post
+          ? res.status(404).json({ message: "No post found with that ID!" })
+          : res.json(post)
       )
       .catch((err) => res.status(500).json(err));
   },
